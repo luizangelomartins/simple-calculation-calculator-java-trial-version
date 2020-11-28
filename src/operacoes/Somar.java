@@ -40,7 +40,7 @@ public class Somar {
                 System.out.println("0 - VOLTAR AO MENU PRINCIPAL.");
                 System.out.println("1 - ADICIONAR VALOR INICIAL.");
                 System.out.println("2 - SOMAR VALORES.");
-                System.err.println("    | TOTAL: " + val2);
+                System.err.println("    | TOTAL DA SOMA: " + val2);
                 System.out.println("");
                 System.out.printf("DIGITE SUA RESPOSTA: ");
                 Scanner escolher = new Scanner(System.in);

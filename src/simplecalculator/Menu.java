@@ -12,6 +12,7 @@ package simplecalculator;
 // IMPORTAÇÃO DE BIBLIOTECAS:
 import java.util.InputMismatchException;
 import java.util.Scanner;
+import operacoes.Multiplicar;
 import operacoes.Somar;
 import operacoes.Subtrair;
 
@@ -25,6 +26,7 @@ public class Menu {
     int escolha_usuario = 0;
     Somar calculos_de_soma = new Somar();
     Subtrair calculos_de_subtracao = new Subtrair();
+    Multiplicar calculos_de_multiplicacao = new Multiplicar();
     
     
     // FUNÇÃO PARA EXIBIÇÃO DO MENU GERAL:
@@ -43,6 +45,7 @@ public class Menu {
                 System.out.println("0 - SAIR.");
                 System.out.println("1 - SOMAR.");
                 System.out.println("2 - SUBTRAIR.");
+                System.out.println("3 - MULTIPLICAR.");
                 System.out.println("");
                 System.out.printf("DIGITE SUA RESPOSTA: ");
                 Scanner escolher = new Scanner(System.in);
@@ -60,9 +63,14 @@ public class Menu {
                         calculos_de_soma.menu_de_extracao_somar();
                     break;
                     
-                    // CASO "1" - SUBTRAIR:
+                    // CASO "2" - SUBTRAIR:
                     case 2:
                         calculos_de_subtracao.menu_de_extracao_subtrair();
+                    break;
+                        
+                    // CASO "3" - MULTIPLICAR:
+                    case 3:
+                        calculos_de_multiplicacao.menu_de_extracao_multiplicar();
                     break;
                         
                     // VALORES INVALIDOS:
