@@ -15,7 +15,7 @@ import java.util.Scanner;
 
 
 // MÉTODO PRINCIPAL DA CLASSE:
-public class Somar {
+public class Subtrair {
     
     
     // DECLARAÇÃO DE VARIAVEIS:
@@ -25,8 +25,8 @@ public class Somar {
     double val2 = 0;
     
     
-    // FUNÇÃO PARA GERAR O MENU DE EXTRAÇÃO DE INFORMAÇÕES "SOMAR":
-    public void menu_de_extracao_somar() {
+    // FUNÇÃO PARA GERAR O MENU DE EXTRAÇÃO DE INFORMAÇÕES "SUBTRAIR":
+    public void menu_de_extracao_subtrair() {
         
         repetir = 1;
         val1 = 0;
@@ -38,7 +38,8 @@ public class Somar {
                 
                 System.out.println("");
                 System.out.println("0 - VOLTAR AO MENU PRINCIPAL.");
-                System.out.println("1 - SOMAR VALORES.");
+                System.out.println("1 - ADICIONAR VALOR INICIAL.");
+                System.out.println("2 - SUBTRAIR VALORES.");
                 System.err.println("    | TOTAL: " + val2);
                 System.out.println("");
                 System.out.printf("DIGITE SUA RESPOSTA: ");
@@ -52,13 +53,21 @@ public class Somar {
                         repetir = 0;
                     break;
 
-                    // CASO "1" - ADICIONAR VALORES | [ SOMAR ]:
+                    // CASO "1" - ADICIONAR VALOR INICIAL:
                     case 1:
                         System.out.println("");
-                        System.out.printf("DIGITE O VALOR PARA ADIÇÃO: ");
-                        Scanner valores_soma1 = new Scanner(System.in);
-                        val1 = valores_soma1.nextDouble();
-                        this.somar_numeros(val1);
+                        System.out.printf("DIGITE O VALOR PARA SUBTRAÇÃO: ");
+                        Scanner inicial1 = new Scanner(System.in);
+                        val2 = inicial1.nextDouble();
+                    break;
+                        
+                    // CASO "2" - ADICIONAR VALORES | [ SUBTRAIR ]:
+                    case 2:
+                        System.out.println("");
+                        System.out.printf("DIGITE O VALOR PARA SUBTRAÇÃO: ");
+                        Scanner valores_subtrair1 = new Scanner(System.in);
+                        val1 = valores_subtrair1.nextDouble();
+                        this.subtrair_numeros(val1);
                      break;
 
                      // VALORES INVALIDOS:
@@ -81,9 +90,9 @@ public class Somar {
     
     
     // FUNÇÃO PARA SOMAR NÚMEROS:
-    public void somar_numeros(double valor1) {
+    public void subtrair_numeros(double valor1) {
         
-        val2 = val2 + valor1;
+        val2 = val2 - valor1;
         
     }
     

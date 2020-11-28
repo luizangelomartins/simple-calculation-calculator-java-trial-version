@@ -13,6 +13,7 @@ package simplecalculator;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 import operacoes.Somar;
+import operacoes.Subtrair;
 
 
 // MÉTODO PRINCIPAL DA CLASSE:
@@ -23,6 +24,7 @@ public class Menu {
     int repetir = 1;
     int escolha_usuario = 0;
     Somar calculos_de_soma = new Somar();
+    Subtrair calculos_de_subtracao = new Subtrair();
     
     
     // FUNÇÃO PARA EXIBIÇÃO DO MENU GERAL:
@@ -40,6 +42,7 @@ public class Menu {
                 System.out.println("");
                 System.out.println("0 - SAIR.");
                 System.out.println("1 - SOMAR.");
+                System.out.println("2 - SUBTRAIR.");
                 System.out.println("");
                 System.out.printf("DIGITE SUA RESPOSTA: ");
                 Scanner escolher = new Scanner(System.in);
@@ -57,6 +60,11 @@ public class Menu {
                         calculos_de_soma.menu_de_extracao_somar();
                     break;
                     
+                    // CASO "1" - SUBTRAIR:
+                    case 2:
+                        calculos_de_subtracao.menu_de_extracao_subtrair();
+                    break;
+                        
                     // VALORES INVALIDOS:
                     default:
                         System.err.println("POR FAVOR DIGITE UM VALOR VALIDO!");
