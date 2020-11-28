@@ -56,7 +56,7 @@ public class Subtrair {
                     // CASO "1" - ADICIONAR VALOR INICIAL:
                     case 1:
                         System.out.println("");
-                        System.out.printf("DIGITE O VALOR PARA SUBTRAÇÃO: ");
+                        System.out.printf("DIGITE O VALOR INICIAL PARA SUBTRAÇÃO: ");
                         Scanner inicial1 = new Scanner(System.in);
                         val2 = inicial1.nextDouble();
                     break;

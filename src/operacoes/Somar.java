@@ -38,7 +38,8 @@ public class Somar {
                 
                 System.out.println("");
                 System.out.println("0 - VOLTAR AO MENU PRINCIPAL.");
-                System.out.println("1 - SOMAR VALORES.");
+                System.out.println("1 - ADICIONAR VALOR INICIAL.");
+                System.out.println("2 - SOMAR VALORES.");
                 System.err.println("    | TOTAL: " + val2);
                 System.out.println("");
                 System.out.printf("DIGITE SUA RESPOSTA: ");
@@ -52,8 +53,16 @@ public class Somar {
                         repetir = 0;
                     break;
 
-                    // CASO "1" - ADICIONAR VALORES | [ SOMAR ]:
+                    // CASO "1" - ADICIONAR VALOR INICIAL:
                     case 1:
+                        System.out.println("");
+                        System.out.printf("DIGITE O VALOR INICIAL PARA SOMA: ");
+                        Scanner inicial1 = new Scanner(System.in);
+                        val2 = inicial1.nextDouble();
+                    break;
+                    
+                    // CASO "2" - ADICIONAR VALORES | [ SOMAR ]:
+                    case 2:
                         System.out.println("");
                         System.out.printf("DIGITE O VALOR PARA ADIÇÃO: ");
                         Scanner valores_soma1 = new Scanner(System.in);
