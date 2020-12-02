@@ -14,6 +14,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 import operacoes.Dividir;
 import operacoes.Multiplicar;
+import operacoes.Potencia;
 import operacoes.Raiz;
 import operacoes.Somar;
 import operacoes.Subtrair;
@@ -32,6 +33,7 @@ public class Menu {
     Multiplicar calculos_de_multiplicacao = new Multiplicar();
     Dividir calculos_de_divisao = new Dividir();
     Raiz calculos_de_raiz = new Raiz();
+    Potencia calculos_de_potencia = new Potencia();
     
     
     // FUNÇÃO PARA EXIBIÇÃO DO MENU GERAL:
@@ -53,6 +55,7 @@ public class Menu {
                 System.out.println("3 - MULTIPLICAR.");
                 System.out.println("4 - DIVIDIR.");
                 System.out.println("5 - RAIZ QUADRADA.");
+                System.out.println("6 - POTÊNCIAÇÃO.");
                 System.out.println("");
                 System.out.printf("DIGITE SUA RESPOSTA: ");
                 Scanner escolher = new Scanner(System.in);
@@ -90,6 +93,11 @@ public class Menu {
                         calculos_de_raiz.menu_de_extracao_raiz();
                     break;
                     
+                    // CASO "6" - POTÊNCIAÇÃO:
+                    case 6:
+                        calculos_de_potencia.menu_de_extracao_potencia();
+                    break;
+                        
                     // VALORES INVALIDOS:
                     default:
                         System.err.println("POR FAVOR DIGITE UM VALOR VALIDO!");

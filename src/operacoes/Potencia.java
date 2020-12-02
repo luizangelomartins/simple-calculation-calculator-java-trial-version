@@ -15,20 +15,22 @@ import java.util.Scanner;
 
 
 // MÉTODO PRINCIPAL DA CLASSE:
-public class Raiz {
+public class Potencia {
     
     
     // DECLARAÇÃO DE VARIAVEIS:
     int repetir = 1;
     int escolha_usuario = 0;
     double val1 = 0;
+    double val2 = 0;
     
     
-    // FUNÇÃO PARA GERAR O MENU DE EXTRAÇÃO DE INFORMAÇÕES "RAIZ QUADRADA":
-    public void menu_de_extracao_raiz() {
+    // FUNÇÃO PARA GERAR O MENU DE EXTRAÇÃO DE INFORMAÇÕES "POTÊNCIA":
+    public void menu_de_extracao_potencia() {
         
         repetir = 1;
         val1 = 0;
+        val2 = 0;
         
         while( repetir != 0 ) {
             
@@ -37,8 +39,8 @@ public class Raiz {
                 System.out.println("");
                 System.out.println("0 - VOLTAR AO MENU PRINCIPAL.");
                 System.out.println("1 - ADICIONAR VALOR INICIAL.");
-                System.out.println("2 - CALCULAR RAIZ.");
-                System.err.println("    | TOTAL: " + val1);
+                System.out.println("2 - FAZER POTÊNCIAÇÃO.");
+                System.err.println("    | TOTAL: " + val2);
                 System.out.println("");
                 System.out.printf("DIGITE SUA RESPOSTA: ");
                 Scanner escolher = new Scanner(System.in);
@@ -54,14 +56,18 @@ public class Raiz {
                     // CASO "1" - ADICIONAR VALOR INICIAL:
                     case 1:
                         System.out.println("");
-                        System.out.printf("DIGITE O VALOR INICIAL PARA CALCULAR A RAIZ: ");
+                        System.out.printf("DIGITE O VALOR INICIAL PARA O CALCULO DA POTÊNCIA: ");
                         Scanner inicial1 = new Scanner(System.in);
-                        val1 = inicial1.nextDouble();
+                        val2 = inicial1.nextDouble();
                     break;
                         
-                    // CASO "2" - ADICIONAR VALORES | [ RAIZ ]:
+                    // CASO "2" - ADICIONAR VALORES | [ POTÊNCIA ]:
                     case 2:
-                        this.calcular_raiz(val1);
+                        System.out.println("");
+                        System.out.printf("DIGITE O VALOR DO EXPOENTE: ");
+                        Scanner valores_potencia1 = new Scanner(System.in);
+                        val1 = valores_potencia1.nextDouble();
+                        this.potenciacao(val2,val1);
                      break;
 
                      // VALORES INVALIDOS:
@@ -83,11 +89,10 @@ public class Raiz {
     }
     
     
-    // FUNÇÃO PARA CALCULAR RAIZ QUADRADA:
-    public void calcular_raiz(double valor1) {
+    // FUNÇÃO PARA CALCULAR POTÊNCIAÇÃO:
+    public void potenciacao(double numero, double expoente) {
         
-        double raiz = valor1;
-        val1 = Math.sqrt(raiz);
+        val2 = Math.pow(numero, expoente);
         
     }
     
