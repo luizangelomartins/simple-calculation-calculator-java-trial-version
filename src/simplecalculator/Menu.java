@@ -14,6 +14,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 import operacoes.Dividir;
 import operacoes.Multiplicar;
+import operacoes.Raiz;
 import operacoes.Somar;
 import operacoes.Subtrair;
 
@@ -30,6 +31,7 @@ public class Menu {
     Subtrair calculos_de_subtracao = new Subtrair();
     Multiplicar calculos_de_multiplicacao = new Multiplicar();
     Dividir calculos_de_divisao = new Dividir();
+    Raiz calculos_de_raiz = new Raiz();
     
     
     // FUNÇÃO PARA EXIBIÇÃO DO MENU GERAL:
@@ -50,6 +52,7 @@ public class Menu {
                 System.out.println("2 - SUBTRAIR.");
                 System.out.println("3 - MULTIPLICAR.");
                 System.out.println("4 - DIVIDIR.");
+                System.out.println("5 - RAIZ QUADRADA.");
                 System.out.println("");
                 System.out.printf("DIGITE SUA RESPOSTA: ");
                 Scanner escolher = new Scanner(System.in);
@@ -82,6 +85,11 @@ public class Menu {
                         calculos_de_divisao.menu_de_extracao_dividir();
                     break;
                         
+                    // CASO "5" - RAIZ QUADRADA:
+                    case 5:
+                        calculos_de_raiz.menu_de_extracao_raiz();
+                    break;
+                    
                     // VALORES INVALIDOS:
                     default:
                         System.err.println("POR FAVOR DIGITE UM VALOR VALIDO!");
